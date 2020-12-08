@@ -277,7 +277,7 @@ html,body{
 	transition: 0.5s;
 }
 
-.header__link:hover, .header__link__active{
+.header__link:hover, {
 	
 	background:rgb(45, 97, 0);
 	-webkit-transform: scale(1.1);
