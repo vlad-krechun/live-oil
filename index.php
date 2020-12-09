@@ -1,78 +1,6 @@
-<!DOCTYPE html>
-<html lang="ro">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
-	<title>Document</title>
-	<?php
-		wp_head(  );
-	?>
-
-</head>
-
-<body>
-	<div class="wrapper">
-		<div class="phone__wrapper">
-			<div class="phone">
-				<a href="tel:+37367111905" class="phone__link">
-					<img src="<?php echo bloginfo("template_url");?>/assets/img/phone.png" alt="" class="phone__img">
-				</a></div>
-		</div>
-
-		<header class="header">
-			<div class='container'>
-				<div class="header__body">
-
-					<!-- <a href="#" class="header__logo">
-							<img src="<?php echo bloginfo("template_url");?>/assets/img/logo.jpg" alt="">
-						</a> -->
-					<div class="header__burger">
-
-						<span></span>
-						<p class="menu">Menu</p>
-					</div>
-					<nav class="header__menu">
-						<ul class="header__list">
-							<li>
-								<a href="" class="header__link header__link__active">Start</a>
-							</li>
-							<li>
-								<a href="" class="header__link">Blog</a>
-							</li>
-							<li>
-								<a href="" class="header__link">Contacte</a>
-							</li>
-							<li>
-								<a href="" class="header__link">Despre noi</a>
-							</li>
-							<li>
-								<a href="" class="header__link">067854854</a>
-							</li>
-							<li>
-								<a href="" class="header__link">
-									<span class="lang">
-										<img src="<?php echo bloginfo("template_url");?>/assets/img/lang.png" alt="" class="lang__logo">
-										Ru
-									</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="header__search search">
-						<input type="search" id="site-search" name="q" aria-label="Search through site content"
-							class="search__input">
-						<button class="search__button">
-							<img src="<?php echo bloginfo("template_url");?>/assets/img/search.png" alt="Caută" class="search__img">
-						</button>
-
-					</div>
-				</div>
-			</div>
-		</header>
+<?php
+	get_header();
+?>
 
 		<div class="fullscreen fullscreen_one" style="background-image:url('<?php echo bloginfo("template_url");?>/assets/img/sunflower.jpg')">
 			<div class="fullscreen__body">
@@ -227,40 +155,6 @@
 		</div>
 
 	</div>
-	<footer class="footer">
-		<div class="footer__wrapper">
-			<div class="footer__articles">
-				<h3 class="footer__articles__title">Articole</h3>
-				<span>
-					<li>lorem</li>
-					<li>lorem</li>
-					<li>lorem</li>
-					<li>lorem</li>
-				</span>
-			</div>
-			<div class="footer__seeds">
-				<h3 class="footer__seeds__title">Ulei din seminte de</h3>
-				<span>
-					<li>lorem dfjkdh </li>
-					<li>lorem cdscdsv</li>
-					<li>lorem dscdscds </li>
-					<li>lorem dscdscds</li>
-				</span>
-			</div>
-			<div class="footer__about">
-				<h3 class="footer__about__title">Despre noi:</h3>
-				<img src="<?php echo bloginfo("template_url");?>/assets/img/about.jpg" alt="Despre noi">
-			</div>
-		</div>
-
-	</footer>
-
-	<!-- Подключаем jQuery -->
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
-	<!-- Подключаем файл JS скриптов -->
-	<?php
-		wp_footer(  );
-	?>
-</body>
-
-</html>
+<?php
+	get_footer();
+?>
