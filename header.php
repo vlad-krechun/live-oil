@@ -22,8 +22,16 @@
 					<img src="<?php echo bloginfo("template_url");?>/assets/img/phone.png" alt="" class="phone__img">
 				</a></div>
 		</div>
-
-		<header class="header">
+			<?php
+				if ( is_user_logged_in() ) {
+					echo'<header class="header log_in">';
+				}
+				else {
+					echo'<header class="header">';
+				}
+				
+			?>
+		
 			<div class='container'>
 				<div class="header__body">
 
