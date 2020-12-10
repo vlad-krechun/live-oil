@@ -2,23 +2,23 @@
 	get_header();
 ?>
 
-		<div class="fullscreen fullscreen_one" style="background-image:url('<?php echo bloginfo("template_url");?>/assets/img/sunflower.jpg')">
+		<div class="fullscreen fullscreen_one" style="background-image:url('<?php the_field('img_header'); ?>')">
 			<div class="fullscreen__body">
 				<span class="space">
 					<a href="#about__oil" class="fullscreen__link">
-						<h2 class="fullscreen__title">Ce ulei să aleg?<button
+						<h2 class="fullscreen__title"><?php the_field('1_quest'); ?><button
 								class="fullscreen__title__button"><span>Află>></span></button></h2>
 
 					</a> </span>
 				<span class="space">
 					<a href="#storage__oil" class="fullscreen__link">
-						<h2 class="fullscreen__title">Cum să păstrez uleiul viu?<button
+						<h2 class="fullscreen__title"><?php the_field('2_quest'); ?><button
 								class="fullscreen__title__button"><span>Află>></span></button></h2>
 
 					</a></span>
 				<span class="space">
 					<a href="#contact" class="fullscreen__link">
-						<h2 class="fullscreen__title">Cum să ne contactați? <button
+						<h2 class="fullscreen__title"><?php the_field('3_quest'); ?> <button
 								class="fullscreen__title__button"><span>Află></span>></button></h2>
 					</a>
 				</span>
@@ -79,9 +79,9 @@
 			</div>
 		</div>
 		<div class="container">
-			<h2 class="container__title">Procesul de presare a uleiului la rece</h2>
+			<h2 class="container__title"><?php the_field('title_video'); ?></h2>
 			<div class="container__video">
-				<iframe width="720" height="405" src="https://www.youtube.com/embed/WNr3ziyGnbM?start=26" frameborder="0"
+				<iframe width="720" height="405" src="<?php the_field('link_youtube'); ?>" frameborder="0"
 					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>

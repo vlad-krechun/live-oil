@@ -8,7 +8,7 @@ add_action('wp_enqueue_scripts' , 'oil_scripts');
 		wp_enqueue_script( 'oil-scripts', get_template_directory_uri() . "/assets/js/script.js", array('jquery'), null, true);
 }
 
-
+add_theme_support( 'custom-logo' );
 
 
 
