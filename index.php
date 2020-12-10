@@ -116,7 +116,7 @@
 			<div class="contacts">
 				<div class="contacts__tel">
 					<h3 class="contacts__title"> Luați legatura cu noi: </h3>
-					<a href="tel:+37367854854" class="contacts__tel__link">&#9742 Sunați - 067854854</a>
+					<a href="tel:<?php the_field('link_tel'); ?>" class="contacts__tel__link">&#9742 Sunați - <?php the_field('number_tel'); ?></a>
 					<div class="social">
 						<h3 class="social__title">Sau scrieți-ne pe rețele de socializare:</h3>
 						<span class="facebook">

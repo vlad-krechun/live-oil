@@ -139,6 +139,8 @@ html,body{
 	align-items: center;
 
 }
+
+
 .fullscreen_one {
 	/* background-color: #7a956b; */
 	background: url("") center / cover no-repeat fixed;
@@ -231,10 +233,11 @@ html,body{
 .header__body {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	justify-content:space-between;
 	height: 45px;
 	align-items: center;
 	padding: 0px 10px;
+	
 }
 .header__logo {
 	flex: 0 0 0px;
@@ -255,7 +258,8 @@ html,body{
 
 
 .header__list {
-	display: flex;
+	
+	display: block;
 	position: relative;
 	z-index: 2;
 }
@@ -683,7 +687,8 @@ overflow: hidden;
 		position: fixed;
 		top: -100%;
 		left: 0;
-		width: 100%;
+		width: 10%;
+		/*max-width: 1200px;*/
 		height: 100%;
 		overflow: auto;
 		transition: all 0.3s ease 0s;
