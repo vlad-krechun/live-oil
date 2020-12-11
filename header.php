@@ -66,14 +66,14 @@
 						<li>
 							<a href="tel:<?php the_field('link_tel'); ?>" class="header__link"><?php the_field('number_tel'); ?></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="" class="header__link">
 								<span class="lang">
 									<img src="<?php echo bloginfo("template_url"); ?>/assets/img/lang.png" alt="" class="lang__logo">
 									Ru
 								</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</nav>
 				<div class="header__search search">
