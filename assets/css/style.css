@@ -322,18 +322,19 @@ html,body{
 .seed__one, .seed__one img, .seed__one span {
 	display: block;
 	text-align: center;
-	/* position: relative; */
+	max-width: 300px;
 	
 
 }
 .seed__one img{
 	border-radius:5px;
-	max-width: 300px;
+
 }
 .seed__one span{
 	font-weight: 700;
 	font-size: 1.3em;
 	margin: 15px 0px 60px 0px;
+	max-width: 300px;
 	
 }
 
