@@ -199,7 +199,7 @@ get_header();
 
 				<label for="subject">Mesajul</label>
 				<textarea id="subject" name="subject" placeholder="Scrieti mesajul.." class="textarea__subject"></textarea>
-
+					<p class="accept__info">Prin trimiterea aceste forme dati acordul la prelucrarea datelelor cu cracter personal </p>
 				<input type="submit" value="Trimite" class="input__submit">
 			</form>
 		</div>

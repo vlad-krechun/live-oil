@@ -518,19 +518,20 @@ overflow: hidden;
 	
 
 }
-.contacts__form form{
+.contacts__form form, .feed__form form{
 	min-width: 100%;
 	display: flex;
 	flex-direction: column;
 	
 }
-.contacts__form label{
+.contacts__form label, .feed__form label {
 	padding: 15px 0;
 	font-size: 1.5em;
 }
 .contacts__form__title{
 	font-size: 2em;
 	font-weight: 700;
+	
 }
 
 .input__fname, .input__phone, .textarea__subject {

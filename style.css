@@ -36,6 +36,21 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} 
+:focus::-webkit-input-placeholder {
+	color: transparent
+ }
+ 
+ :focus::-moz-placeholder {
+	color: transparent
+ }
+ 
+ :focus:-moz-placeholder {
+	color: transparent
+ }
+ 
+ :focus:-ms-input-placeholder {
+	color: transparent
+ }
 /*--------------------*/
 
 .log_in{
@@ -235,12 +250,15 @@ html,body{
 }
 
 .header__body {
+	max-width: 1200px;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	height: 45px;
 	align-items: center;
 	padding: 0px 10px;
+	margin: 0 auto;
+	
 }
 .header__logo {
 	flex: 0 0 0px;
@@ -519,13 +537,13 @@ overflow: hidden;
 	
 
 }
-.contacts__form form{
+.contacts__form form, .feed__form form{
 	min-width: 100%;
 	display: flex;
 	flex-direction: column;
 	
 }
-.contacts__form label{
+.contacts__form label, .feed__form label{
 	padding: 15px 0;
 	font-size: 1.5em;
 }
@@ -547,6 +565,9 @@ overflow: hidden;
 } */
 .textarea__subject {
 	height: 200px;
+}
+.accept__info{
+	margin: 10px 0 0 0 ;
 }
 .input__submit{
 	transition: 0.5s;
@@ -833,12 +854,14 @@ overflow: hidden;
 }
 
 					/* ---------------Стили для блога-------------------------- */
-.header_blog {
+.wrapper__header__blog{
+	width: 100%;
 	background-color: red;
-	margin:2.5em auto 0;
+}
 
+.header_blog {
+	margin:2.5em auto 0;
 	max-width: 1200px;
-	
 }
 .header_blog_block{
 	position: relative;
@@ -850,6 +873,7 @@ overflow: hidden;
 }
 .header_blog_img {
 	display: block;
+	max-width: 100%;
 }
 .header_blog_text {
 	position: absolute;
@@ -868,20 +892,33 @@ overflow: hidden;
 	font-size: 2.5em;
 	font-weight: 700;
 }
-
+.header__blog__link{
+	display: block;
+	transition: 0.5s;
+	color:rgb(0, 0, 0);
+	
+}
+.header__blog__link:hover{
+	transition: 0.7s;
+	transform: scale(1.1);
+	color: rgb(0, 46, 6);
+	
+}
 .wrapper_content_blog {
-	/* border: 5px solid rgb(0, 38, 255);	 */
+	
 	max-width: 1200px;
 	margin: 0 auto;
 }
 .content_blog {
 		display: flex;
 		max-width: 100%;
-		/* border: 5px solid rgb(7, 90, 28); */
-}
-.articles {
-	max-width: 70%;
+		
 	
+}
+.article__list {
+	max-width: 70%;
+
+	margin: 5em 1.5em 0 0;
 
 }
 .article:last-child {
@@ -891,27 +928,49 @@ overflow: hidden;
 .article {
 	margin : 0 0 3em 0;
 	display: flex;
-	/* border: 2px solid rgb(47, 148, 97); */
+	
 }
+
 .img_prev {
+	width: 50%;
+
+}
+.img_prev img {
+	max-width: 100%;
+}
+.img__prev-link{
+	display: block;
+	overflow: hidden;
+
+}
+.img__prev-link img{
+	transition: 1s;
+}
+.img__prev-link img:hover{
+	transition: 1s;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	opacity: 0.95;
 }
 .article_text {
 	display: flex;
 	flex-direction: column;
-	justify-content: center ; /*space-between;*/
+	justify-content: center ; 
 	padding: 0 0 0 1em;
 }
 .article_title {
+	transition: 0.5s;
+	color: #000;
 	margin: 0 0 0.2em 0 ;
 	font-weight: 700;
 	font-size: 1.7em;
 }
+.article_title:hover{
+	transition: 0.7s;
+	color: #33640b;
+}
 .article_prev {
 	margin-bottom: 15px;
-}
-.aside {
-	width: 45%;
-	 /* border: 5px solid red;	  */
 }
 
 .article_category,.article_label{
@@ -927,10 +986,89 @@ overflow: hidden;
 }
 .article__label-single  {
 	display: block;
-	margin: 0 5px;
+	margin: 0 2px;
 	color: rgb(21, 46, 0);
 	font-weight: 700;
+	padding: 2px 7px;
 	
 }
 
+.article__label-single:hover{
+	transition: 0.8s;
+	color:#fff;
+	background-color: rgb(41, 92, 0);
+	border-radius: 3px;
 }
+
+
+.aside{
+	width: 45%;
+	background-color: rgb(165, 165, 165);
+	height: 100%;
+
+}
+.aside__title {
+	text-align:center;
+	margin: 1.22em auto ;
+}
+.aside__title h2{
+	font-size: 2em;
+	/* font-weight: bold; */
+}
+.aside__list {
+	
+
+}
+.aside__list-link {
+	display: block;
+	transition: 0.5s;
+	/* margin: 1em 0 0 0 ; */
+	border-top: 1px solid #000;
+	padding: 1em;
+	font-size: 1.3em;
+	color: rgb(0, 0, 0);
+}
+
+.aside__list-link:hover{
+	transition: 0.9s;
+	background-color: rgb(41, 92, 0);
+	color: #fff;
+	font-weight: 700;
+}
+.aside__list-link:last-child{
+	border-bottom: 1px solid #000;
+	padding: 1em  ;
+}
+
+.aside__category, .aside__label{
+	margin:  0.7em;
+}
+.aside__label{
+
+}
+.header_single_img {
+	display: block;
+
+	max-width: 70%;
+}
+.article__single{
+
+}
+.article__title {
+	font-size: 3em;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 0.8em 0;
+}
+.article__paragraph {
+	margin: 0.65em 0 0 0 ;
+	font-size: 1.3em;
+}
+
+.aside__single{
+	background-color: #fff;
+}
+.feed__form{
+	margin: 2em 0 2em  0 ;
+}
+
