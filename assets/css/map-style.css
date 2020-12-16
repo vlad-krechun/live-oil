@@ -402,10 +402,11 @@ overflow: hidden;
 .articles__element:nth-child(3) { 
 	order: 4 
 }
+
 .articles__img{
 	display: block;
 	max-width: 100%;
-	overflow: hidden;
+	
 	margin: 10px 0px 0px 0px;
 	
 }

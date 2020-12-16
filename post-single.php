@@ -10,14 +10,10 @@ get_header();
 
 <div class="header_blog">
 
-	<div class="header_blog_block">
-		<!--  -->
+	<div class="header_blog_block header__single">
+
 		<img class="header_single_img" src="<?php echo bloginfo("template_url"); ?>/assets/img/cinepa_blog.jpg" alt="">
-		<!-- <div class="header_blog_text">
-			<h1 class="header_blog_title">
-				Beneficiile uleiului viu presat la rece si consumarea lui
-			</h1>
-		</div> -->
+		
 	</div>
 </div>
 

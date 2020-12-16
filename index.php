@@ -141,7 +141,10 @@ get_header();
 	</div>
 </div>
 <div class="articles">
-	<img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_1.jpg" alt="" class="articles__img articles__element">
+		<div class="wrapper__articles__img articles__element">
+			<img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_1.jpg" alt="" class="articles__img ">
+
+		</div>
 	<div class="articles__small articles__element" id="about__oil">
 		<h2 class="articles__title">Beneficiile uleiului viu</h2>
 		<p class="articles__text">Uleiul vegetal, care a fost obținut prin metoda tradițională (presare manuală a
@@ -153,8 +156,10 @@ get_header();
 			<span class="articles__buttons">Citește mai departe...</span>
 		</a>
 	</div>
-	<img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_2.jpg" alt="" class="articles__img articles__element">
-	<div class="articles__small articles__element" id="storage__oil">
+	<div class="wrapper__articles__img articles__element">
+			<img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_2.jpg" alt="" class="articles__img ">
+
+		</div>	<div class="articles__small articles__element" id="storage__oil">
 		<h2 class="articles__title">Cum sa păstrezi uleiul?</h2>
 		<p class="articles__text">Pentru a păstra uleiul viu este nevoie de respectat cîteva reguli: Feriți de
 			lumină Feriți de căldură Reduceți maximal contactul cu aerul Evitați contactul cu metale Recipientul în
@@ -179,11 +184,17 @@ get_header();
 						<img src="<?php the_field('img_facebook'); ?>" alt="facebook" class="social__img">
 					</a>
 				</span>
+				<span class="instagram">
+					<a href="<?php the_field('link_instagram'); ?>" class="social__link">
+						<img src="<?php the_field('img_instagram'); ?>" alt="telegram" class="social__img">
+					</a>
+				</span>
 				<span class="telegram">
 					<a href="<?php the_field('link_telegram'); ?>" class="social__link">
 						<img src="<?php the_field('img_telegram'); ?>" alt="telegram" class="social__img">
 					</a>
 				</span>
+				
 
 			</div>
 		</div>
