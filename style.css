@@ -187,17 +187,20 @@ html,body{
 	padding:15px 5px;
 	color: #fff;
 	font-weight: 700;
-	font-size: 3em;
+	font-size: calc(24px + 36 * (100vw / 1200));
 	transition: 0.8s;
+
 }
 .fullscreen__link{
 	text-decoration: none;
+	overflow: hidden;
 }
 .fullscreen__title:hover{
 	transition: 1s;
 	background-color:rgba(62, 127, 6, 0.8);
 	border-radius: 15px;
-	font-size: 3.155em;
+	transform: rotate(-1deg);
+	
 }
 
 .fullscreen__title__button{
@@ -667,15 +670,13 @@ overflow: hidden;
 	bottom:0;
 	right:0;
 	z-index: 99;
-	
-	width: 100%;
 	max-height: 45%;
 	padding: 7%;
 	background-color: rgba(209, 249, 185, 0.8);
 }
  .header_blog_title {
 	
-	font-size: 2.5em;
+	font-size: calc(20px + 16 * (100vw / 1200));
 	font-weight: 700;
 }
 .header__blog__link{
@@ -794,11 +795,14 @@ overflow: hidden;
 	max-width: 45%;
 	background-color: rgb(165, 165, 165);
 	height: 100%;
+	padding: 15px 0;
+   margin-bottom: 15px;
 
 }
 .aside__title {
 	text-align:center;
-	margin: 1.22em auto ;
+	margin: 12px auto ;
+
 }
 .aside__title h2{
 	font-size: 2em;
@@ -984,6 +988,11 @@ overflow: hidden;
 		font-size: 24px;
 		
 	}
+	.header:before{
+		content: '';
+		height: 50px;
+		
+	}
 
 	.content{
 		margin:-50px auto 0 ;
@@ -1063,7 +1072,15 @@ overflow: hidden;
 		/* justify-content: start; */
 		padding: 0 auto;
 	}
-	
+
+	.header_blog_text {
+		max-width: 90%;
+		max-height: 45%;
+		padding: 3%;
+		
+	}
+
+}
 @media (max-width:767px){
 	.content {
 		padding: 70px 0px 0px 0px;
@@ -1106,7 +1123,10 @@ overflow: hidden;
 		margin: 0 auto;
 		
 	}
-	
+	.header_blog_text {
+		max-width: 100%;
+		padding: 3%;
+		
+	}
 }
 
-}
