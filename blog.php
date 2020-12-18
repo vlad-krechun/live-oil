@@ -26,11 +26,6 @@ get_header();
 
 	</div>
 </div>
-
-
-<!-- <div style="border: solid 12px green; background-color: green;"> -->
-
-
 <div class="wrapper_content_blog">
 	<div class="content_blog">
 		<div class="article__list">
@@ -239,12 +234,21 @@ get_header();
 					</a>
 				</div>
 			</div>
-
-
-
-			<div class="pagination">
-
-			</div>
+			<nav class="pagination">
+  			      <ul>
+                  <li><span class="page-numbers prev inactive">Prev</span></li>
+  				      <li><span class="page-numbers current">1</span></li>
+  				      <li><a href="#" class="page-numbers">2</a></li>
+                  <li><a href="#" class="page-numbers">3</a></li>
+                  <li><a href="#" class="page-numbers">4</a></li>
+                  <li><a href="#" class="page-numbers">5</a></li>
+                  <li><a href="#" class="page-numbers">6</a></li>
+                  <li><a href="#" class="page-numbers">7</a></li>
+                  <li><a href="#" class="page-numbers">8</a></li>
+                  <li><a href="#" class="page-numbers">9</a></li>
+  				      <li><a href="#" class="page-numbers next">Next</a></li>
+  			      </ul>
+  		      </nav>
 		</div>
 		<div class="aside">
 			<div class="aside__title">

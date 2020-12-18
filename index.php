@@ -176,22 +176,22 @@ get_header();
 	<div class="contacts">
 		<div class="contacts__tel">
 			<h3 class="contacts__title"> Luați legatura cu noi: </h3>
-			<a href="tel:<?php the_field('link_tel'); ?>" class="contacts__tel__link">&#9742 Sunați - <?php the_field('number_tel'); ?></a>
+			<a href="tel:<?php the_field('link_tel','2'); ?>" class="contacts__tel__link">&#9742 Sunați - <?php the_field('number_tel','2'); ?></a>
 			<div class="social">
 				<h3 class="social__title">Sau scrieți-ne pe rețele de socializare:</h3>
 				<span class="facebook">
-					<a href="<?php the_field('link_facebook'); ?>" class="social__link">
-						<img src="<?php the_field('img_facebook'); ?>" alt="facebook" class="social__img">
+					<a href="<?php the_field('link_facebook','2'); ?>" class="social__link">
+						<img src="<?php the_field('img_facebook','2'); ?>" alt="facebook" class="social__img">
 					</a>
 				</span>
 				<span class="instagram">
-					<a href="<?php the_field('link_instagram'); ?>" class="social__link">
-						<img src="<?php the_field('img_instagram'); ?>" alt="telegram" class="social__img">
+					<a href="<?php the_field('link_instagram','2'); ?>" class="social__link">
+						<img src="<?php the_field('img_instagram','2'); ?>" alt="telegram" class="social__img">
 					</a>
 				</span>
 				<span class="telegram">
-					<a href="<?php the_field('link_telegram'); ?>" class="social__link">
-						<img src="<?php the_field('img_telegram'); ?>" alt="telegram" class="social__img">
+					<a href="<?php the_field('link_telegram','2'); ?>" class="social__link">
+						<img src="<?php the_field('img_telegram','2'); ?>" alt="telegram" class="social__img">
 					</a>
 				</span>
 				
@@ -200,19 +200,9 @@ get_header();
 		</div>
 		<div class="contacts__form">
 			<h3 class="contacts__form__title">Aveti o intrebare</h3>
-			<form action="#">
-				<label for="fname">Numele</label>
-				<input type="text" id="fname" name="firstname" placeholder="Introduceti numele..." class="input__fname">
-
-				<label for="lname">Telefonul</label>
-				<input type="tel" id="phone" name="phone" placeholder="Telefonul Dumneavoastra..." class="input__phone">
-
-
-				<label for="subject">Mesajul</label>
-				<textarea id="subject" name="subject" placeholder="Scrieti mesajul.." class="textarea__subject"></textarea>
-					<p class="accept__info">Prin trimiterea aceste forme dati acordul la prelucrarea datelelor cu cracter personal </p>
-				<input type="submit" value="Trimite" class="input__submit">
-			</form>
+			<?php
+				echo do_shortcode( '[contact-form-7 id="101" title="Intrebare"]');
+			?>
 		</div>
 	</div>
 </div>

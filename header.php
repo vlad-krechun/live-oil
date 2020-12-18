@@ -50,9 +50,33 @@
 					<p class="menu">Menu</p>
 				</div>
 				<nav class="header__menu">
-					<ul class="header__list">
+
+					<?php
+					wp_nav_menu( [
+						// 'theme_location'  => '',
+						'menu'            => 'Top_menu', 
+						'container'       => false, 
+						// 'container_class' => '', 
+						// 'container_id'    => '',
+						'menu_class'      => 'header__menu', 
+						// 'menu_id'         => '',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						// 'before'          => '',
+						// 'after'           => '',
+						// 'link_before'     => '',
+						// 'link_after'      => '',
+						'items_wrap'      => '<ul class="header__list">%3$s</ul>',
+						'depth'           => 0
+						// 'walker'          => '',
+					] );
+					
+					?>
+					
+
+					<!-- <ul class="header__list">
 						<li>
-							<a href="<?php echo home_url();?>" class="header__link header__link__active">Start</a>
+							<a href="#" class="header__link header__link__active">Start</a>
 						</li>
 						<li>
 							<a href="" class="header__link">Blog</a>
@@ -64,19 +88,14 @@
 							<a href="#contact" class="header__link">Despre noi</a>
 						</li>
 						<li>
-							<a href="tel:<?php the_field('link_tel'); ?>" class="header__link"><?php the_field('number_tel'); ?></a>
+							<a href="tel:" class="header__link"></a>
 						</li>
-						<!-- <li>
-							<a href="" class="header__link">
-								<span class="lang">
-									<img src="<?php echo bloginfo("template_url"); ?>/assets/img/lang.png" alt="" class="lang__logo">
-									Ru
-								</span>
-							</a>
-						</li> -->
-					</ul>
+						
+					</ul> -->
 				</nav>
+
 				<div class="header__search search">
+				<a href="tel:<?php the_field('link_tel','2'); ?>" class="header__link "><?php the_field('number_tel','2'); ?></a>	
 					<input type="search" id="site-search" name="q" aria-label="Search through site content" class="search__input">
 					<button class="search__button">
 						<img src="<?php echo bloginfo("template_url"); ?>/assets/img/search.png" alt="Caută" class="search__img">

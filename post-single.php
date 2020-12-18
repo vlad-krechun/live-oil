@@ -1,6 +1,7 @@
 <?php
 /*
 		Template Name: Страница одиночного поста (статья)
+		Template Post Type: post, page
 */
 ?>
 
@@ -16,11 +17,6 @@ get_header();
 		
 	</div>
 </div>
-
-
-
-
-
 <div class="wrapper_content_blog">
 	<div class="content_blog">
 		<div class="article__list article__single">
@@ -37,18 +33,21 @@ get_header();
 
 
 				<div class="feed__form">
-					<h3 class="contacts__form__title">Lasă un răspuns </h3>
+					<h3 class="contacts__form__title">Lasă un comentariu </h3>
 					<form action="#">
-						<label for="fname">Numele</label>
+						<label for="fname">Numele <span class="obligatory__info">*</span></label>
 						<input type="text" id="fname" name="firstname" placeholder="Introduceti numele..." class="input__fname">
-
+						<label for="e_name">Email-ul Dumneavoastra <span class="obligatory__info">*</span></label>
+						<input type="email" id="y_email" name="y_email" placeholder="Email-ul Dumneavoastra..." class="input__phone">
 						<label for="lname">Telefonul</label>
+						<span>Telefonul Dumneavoastra nu va fi disponibil altor persoane</span>
 						<input type="tel" id="phone" name="phone" placeholder="Telefonul Dumneavoastra..." class="input__phone">
 
-
-						<label for="subject">Mesajul</label>
+					
+						<label for="subject">Mesajul <span class="obligatory__info">*</span></label>
 						<textarea id="subject" name="subject" placeholder="Scrieti mesajul.." class="textarea__subject"></textarea>
-						<p class="accept__info">Prin trimiterea aceste forme dati acordul la prelucrarea datelelor cu cracter personal </p>
+						<p class="accept__info">Prin trimiterea aceste forme dati acordul la prelucrarea datelelor cu caracter personal </p>
+						<span><span class="obligatory__info">*</span> Câmp obligatoriu</span> 
 						<input type="submit" value="Trimite" class="input__submit">
 					</form>
 				</div>
@@ -102,8 +101,6 @@ get_header();
 		</div>
 	</div>
 </div>
-
-
 <?php
 get_footer();
 ?>
