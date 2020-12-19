@@ -29,6 +29,10 @@ get_header();
 <div class="wrapper_content_blog">
 	<div class="content_blog">
 		<div class="article__list">
+					
+
+
+
 
 			<div class="article">
 				<div class="img__prev">
@@ -64,6 +68,12 @@ get_header();
 					</a>
 				</div>
 			</div>
+
+
+
+
+
+
 			<div class="article">
 				<div class="img__prev">
 					<a href="http://google.com" class="img__prev-link">

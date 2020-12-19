@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="fullscreen fullscreen_one" style="background-image:url('<?php the_field('img_header'); ?>')">
+<div class="fullscreen fullscreen_one" style="background-image:url('<?php the_field('img_header','2'); ?>')">
 	<div class="fullscreen__body">
 		<span class="space">
 			<a href="#about__oil" class="fullscreen__link">
@@ -16,7 +16,7 @@ get_header();
 									<?php
 								}
 									?>
-						"class="fullscreen__title"><?php the_field('1_quest'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
+						"class="fullscreen__title"><?php the_field('1_quest','2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
 
 			</a> </span>
 		<span class="space">
@@ -31,7 +31,7 @@ get_header();
 									<?php
 								}
 									?>
-						"class="fullscreen__title"><?php the_field('2_quest'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
+						"class="fullscreen__title"><?php the_field('2_quest','2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
 
 			</a></span>
 		<span class="space">
@@ -46,7 +46,7 @@ get_header();
 									<?php
 								}
 									?>
-						"class="fullscreen__title"><?php the_field('3_quest'); ?> <button class="fullscreen__title__button"><span>Află></span>></button></h2>
+						"class="fullscreen__title"><?php the_field('3_quest','2'); ?> <button class="fullscreen__title__button"><span>Află></span>></button></h2>
 			</a>
 		</span>
 	</div>
@@ -135,9 +135,9 @@ get_header();
 	</div>
 </div>
 <div class="container">
-	<h2 class="container__title"><?php the_field('title_video'); ?></h2>
+	<h2 class="container__title"><?php the_field('title_video','2'); ?></h2>
 	<div class="container__video">
-		<iframe width="720" height="405" src="<?php the_field('link_youtube'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="720" height="405" src="<?php the_field('link_youtube','2'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 </div>
 <div class="articles">
