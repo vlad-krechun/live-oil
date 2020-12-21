@@ -1,7 +1,7 @@
 <?php
 /*
 		Template Name: Страница одиночного поста (статья)
-		Post type : page , post
+		Post type : page , post, category
 */
 ?>
 
@@ -32,17 +32,11 @@ get_header();
 				<a href="" class="article__link">
 					<h2 class="article_title"><?php the_title(); ?></h2>
 				</a>
-				<div class="article_category">
-					<a href="#" class="category_link">Category</a>
-					<a href="#" class="category_link">Category</a>
-
+				<div class="article_category">	
+					<?php the_category(); ?>
 				</div>
 				<div class="article_label">
-					<a href="#" class="article__label-single">Label 1</a>
-					<a href="#" class="article__label-single">Label 2</a>
-					<a href="#" class="article__label-single">Label 3</a>
-					<a href="#" class="article__label-single">Label 4</a>
-
+				<?php the_tags( '#', '', '' ); ?>
 				</div>
 				<div class="single__content"><?php the_content( );?></div>
 				

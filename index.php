@@ -71,9 +71,11 @@ get_header();
 		foreach ($posts as $post) {
 			setup_postdata($post);
 			?>
-				<a href="#" class="seed__link">
+				<a href="<?php the_permalink();?>" class="seed__link">
 			<div class="seed__one">
-				<div class="wrapper__seed__img"> <img src="<?php echo bloginfo("template_url"); ?>/assets/img/dovleac.jpg" alt="De dovleac" class="seed__img">
+				<div class="wrapper__seed__img">
+				<?php the_post_thumbnail('seed-thumb'); ?>
+				
 				</div>
 				<span class="seed__text"><?php the_title(); ?></span>
 			</div>
@@ -83,7 +85,8 @@ get_header();
 
 		wp_reset_postdata(); // сброс
 		?>
-		<a href="#" class="seed__link">
+		
+		<!-- <a href="<?php the_permalink();?>" class="seed__link">
 			<div class="seed__one">
 				<div class="wrapper__seed__img"> <img src="<?php echo bloginfo("template_url"); ?>/assets/img/dovleac.jpg" alt="De dovleac" class="seed__img">
 				</div>
@@ -131,7 +134,7 @@ get_header();
 				</div>
 				<span class="seed__text">De armurariu</span>
 			</div>
-		</a>
+		</a> -->
 	</div>
 </div>
 <div class="container">

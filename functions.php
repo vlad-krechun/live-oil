@@ -10,7 +10,13 @@ add_action('wp_enqueue_scripts' , 'oil_scripts');
 
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'seed-thumb', 310, 250 );
+add_image_size( 'single-thumb', 1200, 9999 );
+
 add_theme_support( 'menus' );
+add_filter('excerpt_more', function($more) {
+	return '...';
+});
 
 add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
 
