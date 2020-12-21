@@ -420,6 +420,7 @@ overflow: hidden;
 .articles__title{
 	font-weight: 700;
 	font-size: 1.5em;
+	color: black;
 }
 .articles__text{
 	display: block;

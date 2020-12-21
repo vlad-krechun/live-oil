@@ -431,6 +431,15 @@ overflow: hidden;
 
 	overflow: hidden;
 }
+.wrapper__articles__img img{
+		border-radius: 20px;
+		display: block;
+		width: 100%;
+		margin: 10px 0px 0px 0px;
+		object-fit: cover;
+		
+	
+}
 
 .articles__element{
 	display: block;
@@ -464,9 +473,16 @@ overflow: hidden;
 	padding: 0 0px;
 	font-size: 1.2em;
 }
+
 .articles__title{
+	transition: 0.4s;
 	font-weight: 700;
 	font-size: 1.5em;
+	color: black;
+}
+.articles__title:hover{
+	transition: 0.6s;
+	color: rgba(62, 127, 6, 0.8);
 }
 .articles__text{
 	display: block;
@@ -1033,6 +1049,20 @@ border-radius: 3px;
 	.contacts{
 		display: block;
 	}
+	.contacts__form{
+		padding: 5% ;
+		width: 100%;
+		margin: 0 ;
+		
+	}
+	
+	.contacts__tel{
+		
+		padding: 5% ;
+		max-width: 100%;
+		margin: 0 auto;
+		
+	}
 	
 }
 @media (max-width:768px){
@@ -1172,7 +1202,7 @@ border-radius: 3px;
 		display: block;
 		margin: 10px 0;
 	}
-	.articles__img{
+	.wrapper__articles__img img{
 		border-radius:5px;
 		max-height: 150px;
 		object-fit: cover;
@@ -1184,20 +1214,7 @@ border-radius: 3px;
 		display: block;
 	}
 
-	.contacts__form{
-		padding: 5% ;
-		width: 100%;
-		margin: 0 ;
-		
-	}
-	
-	.contacts__tel{
-		
-		padding: 5% ;
-		max-width: 100%;
-		margin: 0 auto;
-		
-	}
+
 	.contacts__title,.social__title{
 		font-weight: 700;
 		padding: 30px 0 30px 0;
