@@ -6,10 +6,10 @@
 				<ul>
 				<?php
 				$posts = get_posts(array(
-					'numberposts' => 8,
-					'category_name'    => 'seminte-ulei',
+					'numberposts' => 6,
+					'category'    => 0,
 					'orderby'     => 'date',
-					'order'       => 'ASC',
+					'order'       => 'DESC',
 					'include'     => array(),
 					// 'exclude'     => array(),
 					// 'meta_key'    => '',
