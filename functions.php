@@ -2,6 +2,25 @@
 
 add_action('wp_enqueue_scripts' , 'oil_scripts');
 
+
+add_action( 'widgets_init', 'register_my_widgets' );
+function register_my_widgets(){
+
+	register_sidebar( array(
+		'name'          => 'Sidebar din dreapta',
+		'id'            => "right_sidebar",
+		'description'   => 'Alte articole cae vor apărea ',
+		'class'         => '',
+		'before_widget' => '<aside id="%1$s" class=" aside widget %2$s">',
+		'after_widget'  => "</aside>\n",
+		'before_title'  => '<h2 class="aside__title widgettitle">',
+		'after_title'   => "</h2>\n",
+		'before_sidebar' => '', // WP 5.6
+		'after_sidebar'  => '', // WP 5.6
+	) );
+}
+
+
 	function oil_scripts() {
 		wp_enqueue_style( 'oil-style', get_stylesheet_uri() );
 		wp_enqueue_script( 'oil-scripts-cdn', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), null, true);
