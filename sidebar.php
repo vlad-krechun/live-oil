@@ -1,7 +1,7 @@
 <?php dynamic_sidebar('right_sidebar');?>
-<aside class="aside">
+<!-- <aside class="aside">
 	
-				<div class="aside__title">
+				<div class="aside__title widgettitle">
 					<h2>Alte articole:</h2>
 				</div>
 
@@ -44,4 +44,4 @@
 					<a href="#" class="article__label-single">Label 4</a>
 
 				</div>
-			</aside>
+</aside> -->

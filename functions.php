@@ -10,7 +10,7 @@ function register_my_widgets(){
 		'name'          => 'Sidebar din dreapta',
 		'id'            => "right_sidebar",
 		'description'   => 'Alte articole cae vor apărea ',
-		'class'         => '',
+		'class'         => 'aside',
 		'before_widget' => '<aside id="%1$s" class=" aside widget %2$s">',
 		'after_widget'  => "</aside>\n",
 		'before_title'  => '<h2 class="aside__title widgettitle">',
@@ -72,7 +72,14 @@ add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
 		
 	}
 
-
+	add_filter('widget_tag_cloud_args','set_tag_cloud_args');
+	function set_tag_cloud_args( $args ) {
+		$args['number'] = 30;
+		$args['largest'] = 22;
+		$args['smallest'] = 22;
+		$args['unit'] = 'px';
+		return $args;
+	}
 
 
 
