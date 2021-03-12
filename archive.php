@@ -84,7 +84,7 @@ get_header();
 					</div>
 
 					<div class="article_text">
-						<a href="" class="article__link">
+						<a href="<?php the_permalink(); ?>" class="article__link">
 							<h2 class="article_title"><?php the_title(); ?></h2>
 						</a>
 						<div class="article_category">
@@ -105,11 +105,11 @@ get_header();
 			<?php
 				// формат вывода the_title() ...
 			}
-
+			if (function_exists('wp_corenavi')) wp_corenavi();
 			wp_reset_postdata(); // сброс
 			?>
 
-			<nav class="pagination">
+			<!-- <nav class="pagination">
 				<ul>
 					<li><span class="page-numbers prev inactive">Prev</span></li>
 					<li><span class="page-numbers current">1</span></li>
@@ -123,7 +123,7 @@ get_header();
 					<li><a href="#" class="page-numbers">9</a></li>
 					<li><a href="#" class="page-numbers next">Next</a></li>
 				</ul>
-			</nav>
+			</nav> -->
 		</div>
 		<div class="aside__wrapper">
 			<?php get_sidebar(); ?>

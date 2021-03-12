@@ -766,7 +766,7 @@ p label {
 }
 .wrapper_content_blog {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 0 auto 2em;
 }
 .content_blog {
 		display: flex;
@@ -776,8 +776,7 @@ p label {
 }
 .article__list {
 	max-width: 70%;
-
-	margin: 5em 1.5em 0 0;
+	margin: 5em 1.5em 1em 0;
 
 }
 .article:last-child {

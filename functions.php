@@ -81,6 +81,43 @@ add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
 		return $args;
 	}
 
+	function mysite_pagenav($pages = '', $range = 2){
+		$showitems = ($range * 2)+1;
+		global $paged;
+		if(empty($paged)) $paged = 1;
+		if($pages == ''){
+		  global $wp_query;
+		  $pages = $wp_query->max_num_pages;
+		  if(!$pages){
+			 $pages = 1;
+		  }
+		}
+		if(1 != $pages){
+		  echo '<div class="page_nav">';
+			 if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a class="first_nav" href="'.get_pagenum_link(1).'">&laquo;</a>';
+			 if($paged > 1 && $showitems < $pages) echo '<a class="prev_nav" href="'.get_pagenum_link($paged - 1).'">&lsaquo;</a>';
+			 for ($i=1; $i <= $pages; $i++){
+				if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )){
+				  echo ($paged == $i)? '<span class="current">'.$i.'</span>':'<a href="'.get_pagenum_link($i).'" class="inactive" >'.$i.'</a>';
+				}
+			 }
+			 if ($paged < $pages && $showitems < $pages) echo '<a class="next_nav" href="'.get_pagenum_link($paged + 1).'">&rsaquo;</a>';
+			 if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<a class="last_nav" href="'.get_pagenum_link($pages).'">&raquo;</a>';
+			 echo "</div>\n";
+		}
+	 }
 
-
+	 function wp_corenavi() {
+		global $wp_query;
+		$total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+		$a['total'] = $total;
+		$a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
+		$a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
+		$a['prev_text'] = '&laquo;'; // текст ссылки "Предыдущая страница"
+		$a['next_text'] = '&raquo;'; // текст ссылки "Следующая страница"
+	 
+		if ( $total > 1 ) echo '<nav class="pagination">';
+		echo paginate_links( $a );
+		if ( $total > 1 ) echo '</nav>';
+	 }
 ?>

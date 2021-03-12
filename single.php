@@ -44,9 +44,31 @@ get_header();
 				</div>
 			</div>
 		<?php }
+			echo the_posts_pagination();
 		} else { ?>
 		<p>Записей нет.</p>
 	<?php } ?>
+	<?php
+	$args = [
+		'base'         => '%_%',
+		'format'       => '?page=%#%',
+		'total'        => 1,
+		'current'      => 0,
+		'show_all'     => False,
+		'end_size'     => 1,
+		'mid_size'     => 2,
+		'prev_next'    => True,
+		'prev_text'    => __('« Previous'),
+		'next_text'    => __('Next »'),
+		'type'         => 'plain',
+		'add_args'     => False,
+		'add_fragment' => '',
+		'before_page_number' => '',
+		'after_page_number'  => ''
+	];
+
+	echo paginate_links($args);
+	?>
 
 	<div class="wrraper__contacts" id="contact">
 
