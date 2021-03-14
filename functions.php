@@ -120,4 +120,34 @@ add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
 		echo paginate_links( $a );
 		if ( $total > 1 ) echo '</nav>';
 	 }
+
+
+	 function wpschool_page_navi() {
+		global $wp_query;
+		$pages = '';
+		$maxpages = $wp_query->max_num_pages;
+		if ( !$currentpage = get_query_var( 'paged' ) ) {
+			 $currentpage = 1;
+		}
+		$link['base'] = str_replace( 999999999, '%#%', get_pagenum_link( 999999999 ) );
+		$link['totalpages'] = $maxpages;
+		$link['currentpage'] = $currentpage;
+		$totalpages = 0; //1 - вывести "Страница N из N", 0 - не выводить
+		$link['mid_size'] = 3; //к-во ссылок показывать слева и справа от текущей
+		$link['end_size'] = 1; //к-во ссылок показывать в начале и в конце
+		$link['prev_text'] = 'Пред.';
+		$link['next_text'] = 'След.';
+		if ( $maxpages > 1 ) {
+			 echo '<div class="navigation">';
+		}
+		if ( $totalpages == 1 && $maxpages > 1 ) {
+			 $pages = '<span class="pages">Страница ' . $currentpage . ' из ' . $maxpages . '</span>'."\r\n";
+		}
+		echo $pages . paginate_links($link);
+		if ( $maxpages > 1 ) {
+			  echo '</div>';
+		}
+  }
+  // Всатвить в нужное место в шаблоне
+  /* 	<?php if (function_exists('wpschool_page_navi')) wpschool_page_navi(); ?>*/
 ?>

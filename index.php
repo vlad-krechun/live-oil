@@ -1,241 +1,90 @@
 <?php
+/*
+		Template Name: Страница блога
+		Template Post Type:  page, category 
+		
+*/
+?>
+
+<?php
 get_header();
 ?>
 
-<div class="fullscreen fullscreen_one" style="background-image:url('<?php the_field('img_header', '2'); ?>')">
-	<div class="fullscreen__body">
-		<span class="space">
-			<a href="#about__oil" class="fullscreen__link">
-				<h2 style="
-						<?php
-						$field = get_field('text_color');
-						if ($field == 'dark') {
-						?>
-										color: #000
-									<?php
-								}
-									?>
-						" class="fullscreen__title"><?php the_field('1_quest', '2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
+<div class="header_blog">
 
-			</a> </span>
-		<span class="space">
-			<a href="#storage__oil" class="fullscreen__link">
-				<h2 style="
-						<?php
-						$field = get_field('text_color');
-						if ($field == 'dark') {
-						?>
-										color: #000
-									<?php
-								}
-									?>
-						" class="fullscreen__title"><?php the_field('2_quest', '2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
-
-			</a></span>
-		<span class="space">
-			<a href="#contact" class="fullscreen__link">
-				<h2 style="
-						<?php
-						$field = get_field('text_color');
-						if ($field == 'dark') {
-						?>
-										color: #000
-									<?php
-								}
-									?>
-						" class="fullscreen__title"><?php the_field('3_quest', '2'); ?> <button class="fullscreen__title__button"><span>Află></span>></button></h2>
-			</a>
-		</span>
+	<div class="header_blog_block">
+		<!-- ГОЛОВА БЛОГА -->
+		<?php get_template_part( 'first-article' ); ?>
 	</div>
 </div>
-<div class="content">
-	<h2 class="title__seed"> Unele semințe din care presăm ulei:</h2>
-	<div class="seed">
-		<?php
-		$posts = get_posts(array(
-			'numberposts' => -1,
-			'category_name'    => 'seminte-ulei',
-			'orderby'     => 'date',
-			'order'       => 'ASC',
-			'include'     => array(),
-			// 'exclude'     => array(),
-			// 'meta_key'    => '',
-			// 'meta_value'  =>'',
-			'post_type'   => 'post',
-			'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-		));
-
-		foreach ($posts as $post) {
-			setup_postdata($post);
-		?>
-			<a href="<?php the_permalink(); ?>" class="seed__link">
-				<div class="seed__one">
-					<div class="wrapper__seed__img">
+<div class="wrapper_content_blog">
+	<div class="content_blog">
+		<div class="article__list">
+			<?php if (have_posts()) {
+				while (have_posts()) {
+					the_post(); ?>
+					<!-- Цикл WordPress -->
+					<!-- Вывод постов: the_title() и т.д. -->
+					<div class="article">
+				<div class="img__prev">
+					<a href="<?php the_permalink(); ?>" class="img__prev-link">
 						<?php the_post_thumbnail('seed-thumb'); ?>
 
+					</a>
+				</div>
+
+				<div class="article_text">
+					<a href="<?php the_permalink(); ?>" class="article__link">
+						<h2 class="article_title"><?php the_title(); ?></h2>
+					</a>
+					<div class="article_category">
+						<?php the_category(); ?>
+
 					</div>
-					<span class="seed__text"><?php the_title(); ?></span>
-				</div>
-			</a>
-		<?php
-		}
+					<div class="article_label">
+						<?php the_tags('#', '', ''); ?>
 
-		wp_reset_postdata(); // сброс
-		?>
-
-		<!-- <a href="<?php the_permalink(); ?>" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img"> <img src="<?php echo bloginfo("template_url"); ?>/assets/img/dovleac.jpg" alt="De dovleac" class="seed__img">
+					</div>
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="articles__link">
+						<span class="articles__buttons">Citește mai departe...</span>
+					</a>
 				</div>
-				<span class="seed__text">De dovleac</span>
 			</div>
-		</a>
-		<a href="#" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img">
-					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/in.jpg" alt="De In" class="seed__img">
-				</div>
-
-				<span class="seed__text">De In</span>
-			</div>
-		</a>
-		<a href="#" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img">
-					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/susan.jpg" alt="De Susan" class="seed__img">
-				</div>
-
-				<span class="seed__text">De Susan</span>
-			</div>
-		</a>
-		<a href="#" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img">
-					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/chimen_negru.jpg" alt="De chimen Negru" class="seed__img">
-				</div>
-				<span  class="seed__text">De chimen Negru</span>
-			</div>
-		</a>
-		<a href="#" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img">
-					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/cinepa.jpg" alt="De cînepă" class="seed__img">
-				</div>
-				<span class="seed__text">De cînepă</span>
-			</div>
-		</a>
-		<a href="#" class="seed__link">
-			<div class="seed__one">
-				<div class="wrapper__seed__img">
-					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/armurariu.jpg" alt="De armurariu" class="seed__img">
-				</div>
-				<span class="seed__text">De armurariu</span>
-			</div>
-		</a> -->
-	</div>
-</div>
-<div class="container">
-	<h2 class="container__title"><?php the_field('title_video', '2'); ?></h2>
-	<div class="container__video">
-		<iframe width="720" height="405" src="<?php the_field('link_youtube', '2'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-</div>
-<div class="articles">
-	<?php
-	$posts = get_posts(array(
-		'numberposts' => -1,
-		'category_name'    => 'quest',
-		'orderby'     => 'date',
-		'order'       => 'ASC',
-		'include'     => array(),
-		// 'exclude'     => array(),
-		// 'meta_key'    => '',
-		// 'meta_value'  =>'',
-		'post_type'   => 'post',
-		'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-	));
-
-	foreach ($posts as $post) {
-		setup_postdata($post);
-	?>
-		<div class="wrapper__articles__img articles__element">
-		<a href="<?php the_permalink(); ?>">
-		<?php the_post_thumbnail(); ?>
-		</a>
-		<!-- <img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_1.jpg" alt="" class="articles__img "> -->
-
-		</div>
-		<div class="articles__small articles__element" id="about__oil">
-			<a href="<?php the_permalink(); ?>">
-				<h2 class="articles__title"><?php the_title(); ?></h2>
-			</a>
-			
-			<div class="articles__text">
-			<?php the_excerpt(); ?>
-			</div>
-			<a href="<?php the_permalink(); ?>" class="articles__link">
-				<span class="articles__buttons">Citește mai departe...</span>
-			</a>
-		</div>
+				<?php } ?>
+				<?php the_posts_pagination(); ?>
 			<?php
-			}
-
-			wp_reset_postdata(); // сброс
-			?>
-
-	<!-- <div class="wrapper__articles__img articles__element">
-			<img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_2.jpg" alt="" class="articles__img ">
-
-	</div>	
-	<div class="articles__small articles__element" id="storage__oil">
-		<h2 class="articles__title">Cum sa păstrezi uleiul?</h2>
-		<p class="articles__text">Pentru a păstra uleiul viu este nevoie de respectat cîteva reguli: Feriți de
-			lumină Feriți de căldură Reduceți maximal contactul cu aerul Evitați contactul cu metale Recipientul în
-			care se păstrează uleiul să fie uscat și steri
-		</p>
-		<a href="#" class="articles__link">
-			<span class="articles__buttons ">Citește mai departe... </span>
-		</a>
-	</div> -->
-
-</div>
-<div class="green__line"></div>
-<div class="wrraper__contacts" id="contact">
-	<div class="contacts">
-		<div class="contacts__tel">
-			<h3 class="contacts__title"> Luați legatura cu noi: </h3>
-			<a href="tel:<?php the_field('link_tel', '2'); ?>" class="contacts__tel__link">&#9742 Sunați - <?php the_field('number_tel', '2'); ?></a>
-			<div class="social">
-				<h3 class="social__title">Sau scrieți-ne pe rețele de socializare:</h3>
-				<span class="facebook">
-					<a href="<?php the_field('link_facebook', '2'); ?>" class="social__link">
-						<img src="<?php the_field('img_facebook', '2'); ?>" alt="facebook" class="social__img">
-					</a>
-				</span>
-				<span class="instagram">
-					<a href="<?php the_field('link_instagram', '2'); ?>" class="social__link">
-						<img src="<?php the_field('img_instagram', '2'); ?>" alt="telegram" class="social__img">
-					</a>
-				</span>
-				<span class="telegram">
-					<a href="<?php the_field('link_telegram', '2'); ?>" class="social__link">
-						<img src="<?php the_field('img_telegram', '2'); ?>" alt="telegram" class="social__img">
-					</a>
-				</span>
+			} else { ?>
+				<p>Записей нет.</p>
+			<?php } ?>
 
 
-			</div>
+
+
+			<!-- <nav class="pagination">
+				<ul>
+					<li><span class="page-numbers prev inactive">Prev</span></li>
+					<li><span class="page-numbers current">1</span></li>
+					<li><a href="#" class="page-numbers">2</a></li>
+					<li><a href="#" class="page-numbers">3</a></li>
+					<li><a href="#" class="page-numbers">4</a></li>
+					<li><a href="#" class="page-numbers">5</a></li>
+					<li><a href="#" class="page-numbers">6</a></li>
+					<li><a href="#" class="page-numbers">7</a></li>
+					<li><a href="#" class="page-numbers">8</a></li>
+					<li><a href="#" class="page-numbers">9</a></li>
+					<li><a href="#" class="page-numbers next">Next</a></li>
+				</ul>
+			</nav> -->
 		</div>
-		<div class="contacts__form">
-			<h3 class="contacts__form__title">Aveti o intrebare</h3>
-			<?php
-			echo do_shortcode('[contact-form-7 id="101" title="Intrebare"]');
-			?>
+		<div class="aside__wrapper">
+			<?php get_sidebar(); ?>
 		</div>
+
 	</div>
 </div>
 
-</div>
+
 <?php
 get_footer();
 ?>

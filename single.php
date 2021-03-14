@@ -44,7 +44,7 @@ get_header();
 				</div>
 			</div>
 		<?php }
-			echo the_posts_pagination();
+			posts_nav_link($sep, $prelabel, $nextlabel);
 		} else { ?>
 		<p>Записей нет.</p>
 	<?php } ?>
