@@ -9,14 +9,14 @@
 <?php
 get_header();
 ?>
-
 <div class="header_blog">
-
-	<div class="header_blog_block">
-		<!-- ГОЛОВА БЛОГА -->
-		<?php get_template_part( 'first-article' ); ?>
-	</div>
+<!-- ГОЛОВА БЛОГА -->
+<div class="header_blog_block">
+	
+	<?php get_template_part( 'first-article' ); ?>
 </div>
+</div>
+
 <div class="wrapper_content_blog">
 	<div class="content_blog">
 		<div class="article__list">
@@ -52,7 +52,36 @@ get_header();
 				</div>
 			</div>
 				<?php } ?>
-				<?php the_posts_pagination(); ?>
+				<?php
+					$args = array(
+						'show_all'     => false, // показаны все страницы участвующие в пагинации
+						'end_size'     => 1,     // количество страниц на концах
+						'mid_size'     => 1,     // количество страниц вокруг текущей
+						'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+						'prev_text'    => __('« Previous'),
+						'next_text'    => __('Next »'),
+						'add_args'     => false, // Массив аргументов (переменных запроса), которые нужно добавить к ссылкам.
+						'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
+						'screen_reader_text' => __('Posts navigation'),
+					);
+					add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+					function my_navigation_template( $template, $class ){
+						/*
+						Вид базового шаблона:
+						<nav class="navigation %1$s" role="navigation">
+							<h2 class="screen-reader-text">%2$s</h2>
+							<div class="nav-links">%3$s</div>
+						</nav>
+						*/
+	
+						return '
+						<nav class="navigation %1$s" role="navigation">
+							<div class="nav-links">%3$s</div>
+						</nav>    
+						';
+					}
+					?>
+				<?php the_posts_pagination($args); ?>
 			<?php
 			} else { ?>
 				<p>Записей нет.</p>
@@ -83,6 +112,7 @@ get_header();
 
 	</div>
 </div>
+
 
 
 <?php

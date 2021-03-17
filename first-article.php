@@ -1,6 +1,6 @@
 <?php
 		// параметры по умолчанию
-		$posts = get_posts(array(
+		$newposts = get_posts(array(
 			'numberposts' => 1,
 			'category'    => 0,
 			'orderby'     => 'rand',
@@ -10,10 +10,10 @@
 			'meta_key'    => '',
 			'meta_value'  => '',
 			'post_type'   => 'post',
-			'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+			'suppress_filters' => false, // подавление работы фильтров изменения SQL запроса
 		));
 
-		foreach ($posts as $post) {
+		foreach ($newposts as $post) {
 			setup_postdata($post);
 		?>
 			<?php the_post_thumbnail(); ?>
