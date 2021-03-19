@@ -19,7 +19,7 @@ get_header();
 
 			</a> </span>
 		<span class="space">
-			<a href="#storage__oil" class="fullscreen__link">
+			<a href="#about__oil" class="fullscreen__link">
 				<h2 style="
 						<?php
 						$field = get_field('text_color');
