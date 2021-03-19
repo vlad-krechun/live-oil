@@ -1,4 +1,5 @@
 <?php dynamic_sidebar('right_sidebar');?>
+
 <!-- <aside class="aside">
 	
 				<div class="aside__title widgettitle">

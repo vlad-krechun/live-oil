@@ -21,6 +21,23 @@ function register_my_widgets(){
 }
 
 
+add_action( 'widgets_init', 'register_search_widgets' );
+function register_search_widgets(){
+
+	register_sidebar( array(
+		'name'          => 'Motor de cautare',
+		'id'            => "search_sidebar",
+		'description'   => 'Search',
+		'class'         => 'search',
+		'before_widget' => '<div id="%1$s" class=" search widget %2$s">',
+		'after_widget'  => "</div>\n",
+		'before_title'  => '',
+		'after_title'   => " ",
+		'before_sidebar' => '', // WP 5.6
+		'after_sidebar'  => '', // WP 5.6
+	) );
+}
+
 	function oil_scripts() {
 		wp_enqueue_style( 'oil-style', get_stylesheet_uri() );
 		wp_enqueue_script( 'oil-scripts-cdn', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), null, true);

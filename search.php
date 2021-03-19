@@ -13,7 +13,7 @@ get_header();
 <!-- ГОЛОВА БЛОГА -->
 <div class="header_blog_block">
 	
-	<?php get_template_part( 'first-article' ); ?>
+	<?php //get_template_part( 'first-article' ); ?>
 </div>
 </div>
 
