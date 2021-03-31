@@ -392,7 +392,7 @@ html,body{
 .seed__one span{
 	font-weight: 700;
 	font-size: 1.3em;
-	/* margin: 15px 0 0  0 ; */
+	margin: 3% 0 0  0 ; 
 	
 }
 
@@ -403,7 +403,7 @@ html,body{
 }
 .wrapper__seed__img{
 max-width: 320px;
-max-height: 245px;
+max-height: 240px;
 overflow: hidden;
 
 }
@@ -862,8 +862,6 @@ p label {
 
 .single__content{
 	font-size: calc(16px + 6 * (100vw / 1200));
-
-	border: solid 2px red;
 	overflow: hidden;
 }
 
@@ -1399,3 +1397,7 @@ border-radius: 3px;
 	}
 }
 
+
+
+
+ZOOM
