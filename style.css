@@ -213,7 +213,7 @@ html,body{
 
 .fullscreen__title {
 	padding:15px 5px;
-	color: #fff;
+	color: rgb(202, 199, 0);
 	font-weight: 700;
 	font-size: calc(24px + 36 * (100vw / 1200));
 	transition: 0.8s;
@@ -318,7 +318,7 @@ html,body{
 	list-style: none;
 	margin: 0px ;
 }
-.header__link {
+.header__link, .header__menu ul li a  {
 	display: block;
 	color: #fff;
 	text-transform: uppercase;
@@ -328,7 +328,7 @@ html,body{
 	transition: 0.5s;
 }
 
-.header__link:hover {
+.header__link:hover, .header__menu ul li a:hover  {
 	
 	background:rgb(45, 97, 0);
 	-webkit-transform: scale(1.1);
@@ -1353,6 +1353,9 @@ border-radius: 3px;
 	.search__input{
 		max-width: 155px;
 	}
+	.search{
+		height: 38px;
+	}
 	.seed__img{
 		width: 350px;
 	}
@@ -1399,5 +1402,3 @@ border-radius: 3px;
 
 
 
-
-ZOOM

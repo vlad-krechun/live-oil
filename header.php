@@ -53,24 +53,47 @@
 				<nav class="header__menu">
 
 					<?php
-					wp_nav_menu([
-						// 'theme_location'  => '',
-						'menu'            => 'Top_menu',
-						'container'       => false,
-						// 'container_class' => '', 
-						// 'container_id'    => '',
-						'menu_class'      => 'header__menu',
-						// 'menu_id'         => '',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						// 'before'          => '',
-						// 'after'           => '',
-						// 'link_before'     => '',
-						// 'link_after'      => '',
-						'items_wrap'      => '<ul class="header__list">%3$s</ul>',
-						'depth'           => 0
-						// 'walker'          => '',
-					]);
+
+					if (is_front_page()) {
+						wp_nav_menu([
+							// 'theme_location'  => '',
+							'menu'            => 'Top_menu',
+							'container'       => false,
+							// 'container_class' => '', 
+							// 'container_id'    => '',
+							'menu_class'      => 'header__menu',
+							// 'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							// 'before'          => '',
+							// 'after'           => '',
+							// 'link_before'     => '',
+							// 'link_after'      => '',
+							'items_wrap'      => '<ul class="header__list">%3$s</ul>',
+							'depth'           => 0
+							// 'walker'          => '',
+						]);
+					} else {
+						wp_nav_menu([
+							// 'theme_location'  => '',
+							'menu'            => 'Top_menu_page',
+							'container'       => false,
+							// 'container_class' => '', 
+							// 'container_id'    => '',
+							'menu_class'      => 'header__menu',
+							// 'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							// 'before'          => '',
+							// 'after'           => '',
+							// 'link_before'     => '',
+							// 'link_after'      => '',
+							'items_wrap'      => '<ul class="header__list">%3$s</ul>',
+							'depth'           => 0
+							// 'walker'          => '',
+						]);
+					}
+
 
 					?>
 

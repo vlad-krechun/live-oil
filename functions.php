@@ -167,4 +167,3 @@ add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
   }
   // Всатвить в нужное место в шаблоне
   /* 	<?php if (function_exists('wpschool_page_navi')) wpschool_page_navi(); ?>*/
-?>
