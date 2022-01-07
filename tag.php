@@ -10,10 +10,6 @@
 get_header();
 ?>
 
-
-
-
-
 <div class="header_blog-category">
 
 	<div class="title__category">
@@ -105,8 +101,6 @@ get_header();
 
 	</div>
 </div>
-
-
 <?php
 get_footer();
 ?>

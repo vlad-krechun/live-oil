@@ -39,7 +39,7 @@
 				<?php
 				$posts = get_posts(array(
 					'numberposts' => 8,
-					'category_name'    => 'seminte-ulei',
+					'category_name'    => 'descriere-ulei',
 					'orderby'     => 'date',
 					'order'       => 'ASC',
 					'include'     => array(),

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
 
 
 	<title>
@@ -24,7 +24,7 @@
 	<div class="wrapper">
 		<div class="phone__wrapper">
 			<div class="phone">
-				<a href="tel:<?php the_field('link_tel'); ?>" class="phone__link">
+				<a href="tel:<?php the_field('link_tel' , '2'); ?>" class="phone__link">
 					<img src="<?php echo bloginfo("template_url"); ?>/assets/img/phone.png" alt="" class="phone__img">
 				</a>
 			</div>

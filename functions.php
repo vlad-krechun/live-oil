@@ -40,8 +40,7 @@ function register_search_widgets(){
 
 	function oil_scripts() {
 		wp_enqueue_style( 'oil-style', get_stylesheet_uri() );
-		wp_enqueue_script( 'oil-scripts-cdn', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), null, true);
-		wp_enqueue_script( 'oil-scripts', get_template_directory_uri() . "/assets/js/script.js", array('jquery'), null, true);
+		wp_enqueue_script( 'oil-scripts', get_template_directory_uri() . "/assets/js/script.js", array(), null, true);
 }
 
 add_theme_support( 'custom-logo' );
@@ -167,3 +166,4 @@ add_filter( 'nav_menu_link_attributes', 'filter_menu_atributes', 10, 3 );
   }
   // Всатвить в нужное место в шаблоне
   /* 	<?php if (function_exists('wpschool_page_navi')) wpschool_page_navi(); ?>*/
+?>

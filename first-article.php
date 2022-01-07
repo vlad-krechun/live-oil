@@ -16,7 +16,7 @@
 		foreach ($newposts as $post) {
 			setup_postdata($post);
 		?>
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('large', array('class' => 'header-img-blog')); ?>
 			<!-- <img class="header_blog_img" src="<?php echo bloginfo("template_url"); ?>/assets/img/cinepa_blog.jpg" alt=""> -->
 			<a href="<?php the_permalink(); ?>" class="header__blog__link">
 				<div class="header_blog_text">

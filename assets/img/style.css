@@ -1,0 +1,17 @@
+.article{
+
+}
+
+.img__prev{
+	border: 5px solid red;
+	/* width: 400px; */
+	height: 500px;
+	overflow: hidden;
+}
+
+.img__prev img{
+	max-width: 100%;
+/* transform: scale(2); */
+	object-fit: cover;
+	object-position: bottom center;
+}

@@ -1,4 +1,5 @@
-		<?php /* Template Name: Страница со всеми записями */ 
+
+<?php /* Template Name: Страница со всеми записями */ 
 		get_header();
 		if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article class="all_post">
@@ -43,9 +44,7 @@
 		</article>
 
 		<style>
-		.all_post ul{margin:25px 0;}
-		.all_post h2{color:#000;}
-		.all_post h3{font-size:14px;}
+		
 		</style>
 		<?php
 		endwhile; 

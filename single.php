@@ -11,16 +11,16 @@ get_header();
 
 <div class="header_blog">
 
-	<div class="header_blog_block header__single">
+	<!-- <div class="header_blog_block header__single"> -->
 		<?php if (have_posts()) {
 			while (have_posts()) {
 				the_post(); ?>
 				<span class="header_single_img">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('single-thumb'); ?>
 				</span>
 
 
-	</div>
+	<!-- </div> -->
 </div>
 <div class="wrapper_content_blog">
 	<div class="content_blog">

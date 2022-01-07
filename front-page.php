@@ -15,21 +15,17 @@ get_header();
 									<?php
 								}
 									?>
-						" class="fullscreen__title"><?php the_field('1_quest', '2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
+						" class="fullscreen__title"><?php the_field('1_quest', '2'); ?><button
+						class="fullscreen__title__button"><span>Află</span></button></h2>
 
 			</a> </span>
 		<span class="space">
 			<a href="#about__oil" class="fullscreen__link">
-				<h2 style="
-						<?php
-						$field = get_field('text_color');
-						if ($field == 'dark') {
-						?>
-										color: #000
-									<?php
-								}
-									?>
-						" class="fullscreen__title"><?php the_field('2_quest', '2'); ?><button class="fullscreen__title__button"><span>Află>></span></button></h2>
+				<h2 style="	<?php $field = get_field('text_color'); if ($field == 'dark') {	?>color: #000 <?php }?>
+						" class="fullscreen__title"><?php the_field('2_quest', '2'); ?>
+						<button
+						class="fullscreen__title__button"><span>Află</span></button>
+					</h2>
 
 			</a></span>
 		<span class="space">
@@ -43,7 +39,8 @@ get_header();
 									<?php
 								}
 									?>
-						" class="fullscreen__title"><?php the_field('3_quest', '2'); ?> <button class="fullscreen__title__button"><span>Află></span>></button></h2>
+						" class="fullscreen__title"><?php the_field('3_quest', '2'); ?> <button
+						class="fullscreen__title__button"><span>Află</span></button></h2>
 			</a>
 		</span>
 	</div>
@@ -54,7 +51,7 @@ get_header();
 		<?php
 		$posts = get_posts(array(
 			'numberposts' => -1,
-			'category_name'    => 'seminte-ulei',
+			//'category_name'    => ,
 			'orderby'     => 'date',
 			'order'       => 'ASC',
 			'include'     => array(),
@@ -68,15 +65,16 @@ get_header();
 		foreach ($posts as $post) {
 			setup_postdata($post);
 		?>
+		<div class="seed__one">
 			<a href="<?php the_permalink(); ?>" class="seed__link">
-				<div class="seed__one">
-					<div class="wrapper__seed__img">
-						<?php the_post_thumbnail('seed-thumb'); ?>
 
-					</div>
-					<span class="seed__text"><?php the_title(); ?></span>
+				<div class="wrapper__seed__img">
+					<?php the_post_thumbnail('seed-thumb'); ?>
+
 				</div>
+				<span class="seed__text"><?php the_title(); ?></span>
 			</a>
+		</div>
 		<?php
 		}
 
@@ -89,7 +87,8 @@ get_header();
 <div class="container">
 	<h2 class="container__title"><?php the_field('title_video', '2'); ?></h2>
 	<div class="container__video">
-		<iframe width="720" height="405" src="<?php the_field('link_youtube', '2'); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="720" height="405" src="<?php the_field('link_youtube', '2'); ?>" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 </div>
 <div class="articles">
@@ -100,7 +99,7 @@ get_header();
 		'orderby'     => 'date',
 		'order'       => 'ASC',
 		'include'     => array(),
-		// 'exclude'     => array(),
+		// 'exclude'     => array(),	
 		// 'meta_key'    => '',
 		// 'meta_value'  =>'',
 		'post_type'   => 'post',
@@ -110,25 +109,25 @@ get_header();
 	foreach ($posts as $post) {
 		setup_postdata($post);
 	?>
-		<div class="wrapper__articles__img articles__element">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail(); ?>
-			</a>
-			<!-- <img src="<?php echo bloginfo("template_url"); ?>/assets/img/articles_1.jpg" alt="" class="articles__img "> -->
+	<div class="wrapper__articles__img articles__element">
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail(); ?>
+		</a>
+		<?php echo bloginfo("template_url"); ?>
 
-		</div>
-		<div class="articles__small articles__element" id="about__oil">
-			<a href="<?php the_permalink(); ?>">
-				<h2 class="articles__title"><?php the_title(); ?></h2>
-			</a>
+	</div>
+	<div class="articles__small articles__element" id="about__oil">
+		<a href="<?php the_permalink(); ?>">
+			<h2 class="articles__title"><?php the_title(); ?></h2>
+		</a>
 
-			<div class="articles__text">
-				<?php the_excerpt(); ?>
-			</div>
-			<a href="<?php the_permalink(); ?>" class="articles__link">
-				<span class="articles__buttons">Citește mai departe...</span>
-			</a>
+		<div class="articles__text">
+			<?php the_excerpt(); ?>
 		</div>
+		<a href="<?php the_permalink(); ?>" class="articles__link">
+			<span class="articles__buttons">Citește mai departe...</span>
+		</a>
+	</div>
 	<?php
 	}
 
@@ -156,7 +155,8 @@ get_header();
 	<div class="contacts">
 		<div class="contacts__tel">
 			<h3 class="contacts__title"> Luați legatura cu noi: </h3>
-			<a href="tel:<?php the_field('link_tel', '2'); ?>" class="contacts__tel__link">&#9742 Sunați - <?php the_field('number_tel', '2'); ?></a>
+			<a href="tel:<?php the_field('link_tel', '2'); ?>" class="contacts__tel__link">&#9742 Sunați -
+				<?php the_field('number_tel', '2'); ?></a>
 			<div class="social">
 				<h3 class="social__title">Sau scrieți-ne pe rețele de socializare:</h3>
 				<span class="facebook">
@@ -193,3 +193,12 @@ get_header();
 <?php
 get_footer();
 ?>
+
+
+Действительно[отклонено] Главная -> Главная (Fetch First)
+Ошибка: не удалось нажать несколько Refs на «https://github.com/vlad-krechun/live-oil.git»
+Подсказка: обновления были отклонены, потому что удаленный содержит работу, которые вы делаете
+Подсказка: не иметь локально.Это обычно вызвано очередным толканием репозитория
+Подсказка: к тому же работе.Вы можете сначала интегрировать удаленные изменения
+Подсказка: (например, «Гит расскажи ...») Перед толканием снова нажимается.
+Подсказка: см. «Примечание о быстродействии» в «Git Push --help» для деталей.
